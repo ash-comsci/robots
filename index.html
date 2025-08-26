@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  <title>FTC Team Handbook — Funky Edition</title>
+
+  <!-- Google Fonts: Funky display for headings + clean body font -->
+  https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;800&display=swap
+
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="theme-color" content="#0A3D62" />
+</head>
+<body>
+  <!-- =================== HEADER / NAV =================== -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">FTC</div>
+      <div class="brand-text">
+        <h1>Team Handbook</h1>
+        <p>Roles, Routines & Ready‑to‑Use Checklists</p>
+      </div>
+    </div>
+
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-list">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#safety">Safety</a></li>
+        <li><a href="#kit">Studica Kit</a></li>
+        <li class="has-sub">
+          <a href="#roles">Roles ▾</a>
+          <ul class="sub">
+            <li><a href="#builder">Builder</a></li>
+            <li><a href="#programmer">Programmer</a></li>
+            <li><a href="#outreach">Outreach</a></li>
+          </ul>
+        </li>
+        <li><a href="#project">Project Mgmt</a></li>
+        <li><a href="#wiring">Electrical</a></li>
+        <li><a href="#testing">Testing</a></li>
+        <li><a href="#competition">Competition Day</a></li>
+        <li class="has-sub">
+          <a href="#appendices">Appendices ▾</a>
+          <ul class="sub">
+            <li><a href="#templates">Templates</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="#schedule">Schedules ▾</a>
+          <ul class="sub">
+            <li><a href="#schedule-8w">5A: 8‑Week Plan</a></li>
+            <li><a href="#calendar">5B: Date‑Aligned</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =================== HERO =================== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h2>Build. Code. Tell the Story.</h2>
+      <p>Everything a new FTC team needs—using the Studica FTC Starter Kit—to get competition‑ready.</p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="#schedule">Jump to Schedules</a>
+        <a class="btn ghost" href="#templates">Open Templates</a>
+      </div>
+
+      <div class="quick-search">
+        <label for="q">Quick Find</label>
+        <input id="q" type="search" placeholder="Search sections, checklists, topics…" />
+      </div>
+    </div>
+  </section>
+
+  <main id="content">
+    <!-- =================== OVERVIEW =================== -->
+    <section id="overview" class="card section">
+      <h3>1. FTC at a Glance</h3>
+      <p>
+        FIRST Tech Challenge (FTC) is a robotics program where teams design, build, program, and drive a robot
+        to play a themed game on a 12 ft × 12 ft field. Each season introduces a new game with unique scoring tasks.
+      </p>
+      <h4>Match Structure (Typical)</h4>
+      <ul>
+        <li><strong>Autonomous (~30s):</strong> Robot runs pre‑programmed routines.</li>
+        <li><strong>Tele‑Op (~1:30):</strong> Drivers control the robot and score.</li>
+        <li><strong>Endgame (~30s):</strong> Special scoring opportunities; precision matters.</li>
+      </ul>
+      <p class="note">
+        Always check the current season’s Game Manuals for exact rules, scoring, and constraints.
+      </p>
+
+      <h4>Core Team Roles</h4>
+      <ul>
+        <li><strong>Builder:</strong> Mechanical design, assembly, reliability.</li>
+        <li><strong>Programmer:</strong> TeleOp control + autonomous routines.</li>
+        <li><strong>Outreach/Marketing:</strong> Engineering Portfolio, community engagement, judging.</li>
+      </ul>
+    </section>
+
+    <!-- =================== SAFETY =================== -->
+    <section id="safety" class="card section">
+      <h3>2. Safety & Lab Practices</h3>
+      <ul class="checklist">
+        <li>Safety glasses anytime cutting/drilling/testing spinning parts.</li>
+        <li>Hair tied back; no loose clothing/jewelry; closed‑toe shoes.</li>
+        <li>Use the right tools, correct hex sizes, and proper torque.</li>
+        <li>Power off before wiring; avoid battery shorts and pinched wires.</li>
+        <li>Use only FTC‑approved batteries/chargers; never use damaged batteries.</li>
+        <li>Keep the pit clean: sorted parts, clear test zone.</li>
+        <li>Two‑person rule for risky operations: one operates, one spots.</li>
+      </ul>
+    </section>
+
+    <!-- =================== KIT OVERVIEW =================== -->
+    <section id="kit" class="card section">
+      <h3>3. Studica FTC Starter Kit Overview</h3>
+      <p>The Studica kit includes structure, motion components, and fasteners to build a robust starter bot.</p>
+      <h4>Typical Contents (May Vary)</h4>
+      <ul>
+        <li>U‑channel, plates, brackets, gussets.</li>
+        <li>Wheels/hubs (traction/omni), shafts/axles, bearings.</li>
+        <li>Gears/belts/chains for power transmission.</li>
+        <li>DC motors + mounts; standard servos.</li>
+        <li>Fasteners: screws, locknuts, spacers, standoffs, collars.</li>
+        <li>Basic tools: hex keys, wrench; add drivers, snips, threadlocker.</li>
+      </ul>
+      <h4>Organizing Your Kit</h4>
+      <ul>
+        <li>Bins: structure, motion, fasteners, electronics, tools.</li>
+        <li>Simple BOM spreadsheet for inventory.</li>
+        <li>Prototype bin separate from competition‑ready parts.</li>
+      </ul>
+    </section>
+
+    <!-- =================== ROLES =================== -->
+    <section id="roles" class="section">
+      <div class="role-grid">
+        <!-- BUILDER -->
+        <article id="builder" class="card role">
+          <h3>4.1 Builder</h3>
+          <p class="goal"><strong>Main Goal:</strong> Assemble a durable, serviceable robot that scores reliably.</p>
+          <h4>Starter Path (Weeks 1–3)</h4>
+          <ol>
+            <li>Assemble square chassis; check alignment.</li>
+            <li>Install 4‑wheel tank drive; keep CG low.</li>
+            <li>Mount control hub + battery; plan wire paths.</li>
+            <li>Add one simple scoring mechanism.</li>
+            <li>Add guards to protect wires/gears.</li>
+          </ol>
+          <h4>Core Practices</h4>
+          <ul class="pill-list">
+            <li>Design before build (sketch/whiteboard).</li>
+            <li>Measure twice; dry‑fit, then tighten.</li>
+            <li>Square & symmetric; equal spacers.</li>
+            <li>Blue threadlocker on metal‑metal; avoid plastics.</li>
+            <li>Aligned shafts & proper tension.</li>
+            <li>Serviceability: easy access to spares.</li>
+            <li>Keep weight low & centered.</li>
+          </ul>
+          <h4>Mechanism Ideas (Start with One)</h4>
+          <ul>
+            <li>Intake + hopper</li>
+            <li>Simple arm + servo claw</li>
+            <li>2–3 stage linear slide</li>
+            <li>Passive drop‑off chute</li>
+          </ul>
+          <h4>Builder Meeting Checklist</h4>
+          <ul class="checklist">
+            <li>Review goals & sketch/CAD.</li>
+            <li>Check fasteners & threadlocker.</li>
+            <li>Verify wheel alignment & belt/chain tension.</li>
+            <li>Motion smooth through full range.</li>
+            <li>Wires clear and strain‑relieved.</li>
+            <li>Log changes with measurements.</li>
+          </ul>
+        </article>
+
+        <!-- PROGRAMMER -->
+        <article id="programmer" class="card role">
+          <h3>4.2 Programmer</h3>
+          <p class="goal"><strong>Main Goal:</strong> Reliable TeleOp first, then consistent autonomous.</p>
+          <h4>Tooling Options</h4>
+          <ul>
+            <li><strong>Blocks (OnBot):</strong> great for first‑timers.</li>
+            <li><strong>Java (OnBot/Android Studio):</strong> more control.</li>
+            <li><strong>Driver Station:</strong> Driver Hub or Android phone.</li>
+          </ul>
+          <h4>Bring‑Up Steps</h4>
+          <ol>
+            <li>Wire correctly; secure connectors.</li>
+            <li>Create/Name Robot Config; map ports.</li>
+            <li>Minimal TeleOp drive + mechanism buttons.</li>
+            <li>Telemetry: voltage, encoders, sensors.</li>
+            <li>Safety interlocks (limits/soft stops).</li>
+          </ol>
+          <h4>From TeleOp to Autonomous</h4>
+          <ul>
+            <li>Encoders for distance/turns.</li>
+            <li>IMU for heading hold/precise turns.</li>
+            <li>Distance/Color sensors if available.</li>
+            <li>State machines with timeouts.</li>
+            <li>(Optional) field‑centric control.</li>
+          </ul>
+          <h4>Structure Tips</h4>
+          <ul class="pill-list">
+            <li>Subsystem classes (drive/arm/intake).</li>
+            <li>Centralize constants & ports.</li>
+            <li>Telemetry & tuning logs.</li>
+            <li>Version control & backups.</li>
+          </ul>
+          <h4>Programmer Meeting Checklist</h4>
+          <ul class="checklist">
+            <li>Config matches wiring.</li>
+            <li>Drive base straight & turns consistent.</li>
+            <li>Test mechanisms individually.</li>
+            <li>Record tuning values & notes.</li>
+            <li>Backup after major changes.</li>
+          </ul>
+        </article>
+
+        <!-- OUTREACH -->
+        <article id="outreach" class="card role">
+          <h3>4.3 Outreach / Marketing</h3>
+          <p class="goal"><strong>Main Goal:</strong> Tell the story, engage the community, and prepare a clear, concise Engineering Portfolio.</p>
+          <h4>Engineering Portfolio Essentials</h4>
+          <ul>
+            <li>Audience: judges (~15 pages; verify current rules).</li>
+            <li>Include: team, design process, code highlights, outreach impact, lessons, future plans.</li>
+            <li>Skimmable: headings, diagrams/photos, charts, callouts.</li>
+          </ul>
+          <h4>Notebook & Documentation</h4>
+          <ul>
+            <li>Log every meeting: goals, tasks, outcomes, next steps.</li>
+            <li>Photos of prototypes, code screenshots, test data.</li>
+            <li>Outreach log: date, audience, impact, reflections.</li>
+          </ul>
+          <h4>Community & Sponsors</h4>
+          <ul>
+            <li>One‑page team handout for schools/sponsors.</li>
+            <li>Plan 2–3 events (demos/workshops).</li>
+            <li>Send thank‑yous with photos & metrics.</li>
+          </ul>
+          <h4>Judging & Pit Prep</h4>
+          <ul class="checklist">
+            <li>5‑minute presentation: problem → design → results → impact.</li>
+            <li>Welcoming pit visuals; tidy & ready.</li>
+            <li>Everyone can explain their role & one learning.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- =================== PROJECT MGMT =================== -->
+    <section id="project" class="card section">
+      <h3>5. Project Management & Season Timeline</h3>
+      <p>Adopt a simple rhythm: stand‑up, focused work blocks, debrief.</p>
+      <h4>Roles & Routines</h4>
+      <ul>
+        <li><strong>Stand‑Up (5–10m):</strong> Yesterday → Today → Blockers.</li>
+        <li><strong>Work Blocks (60–90m):</strong> Subteams in parallel, sync often.</li>
+        <li><strong>Demo & Debrief (10–15m):</strong> Show progress, record data, set next steps.</li>
+      </ul>
+      <h4>Suggested 12‑Week Plan (high‑level)</h4>
+      <ol>
+        <li>Onboarding, safety, kit inventory, goals, game analysis.</li>
+        <li>Chassis prototype, control bench test, portfolio outline.</li>
+        <li>Drivetrain driving; simple mechanism; first TeleOp.</li>
+        <li>Mechanism V1 mounted; auto framework; outreach plan.</li>
+        <li>Testing/tuning; reliability fixes; portfolio v1 pass.</li>
+        <li>Mechanism V2; autonomous path v1; outreach event.</li>
+        <li>Driver practice; spares list; portfolio refine.</li>
+        <li>Full match sims; auto consistent; outreach event.</li>
+        <li>Inspection checklist; pit layout; judge draft.</li>
+        <li>Scrimmage; bug fixes; portfolio final draft.</li>
+        <li>Final practice; pack/label; mock judging.</li>
+        <li>Comp week: inspections, matches, judging, reflection.</li>
+      </ol>
+    </section>
+
+    <!-- =================== ELECTRICAL =================== -->
+    <section id="wiring" class="card section">
+      <h3>6. Electrical & Wiring Essentials</h3>
+      <ul>
+        <li>Mount hubs with access to ports & LEDs.</li>
+        <li>Use FTC 12V battery + main switch; secure with straps.</li>
+        <li>Label wires both ends; print the port map.</li>
+        <li>Strain relief: route along structure, avoid pinch points.</li>
+        <li>Use ferrules/crimps; tug‑test every connection.</li>
+        <li>Separate power & signal where possible.</li>
+        <li>Carry spare fuses, battery, and critical cables.</li>
+      </ul>
+      <h4>Example Port Map</h4>
+      <div class="port-map">
+        <div><strong>Motors:</strong> M0 LF, M1 RF, M2 LR, M3 RR, M4 Arm/Slide</div>
+        <div><strong>Servos:</strong> S0 Claw, S1 Wrist</div>
+        <div><strong>Sensors:</strong> I2C IMU, Analog Distance, Digital Limit (upper/lower)</div>
+      </div>
+    </section>
+
+    <!-- =================== TESTING =================== -->
+    <section id="testing" class="card section">
+      <h3>7. Testing & Iteration</h3>
+      <ul>
+        <li>Write a test plan before changes (trials, criteria).</li>
+        <li>Use telemetry: speed, cycle time, errors, voltage.</li>
+        <li>Change one variable at a time; log results.</li>
+        <li>Regression checklists after updates.</li>
+        <li>Video tests; analyze failures in slow‑mo.</li>
+      </ul>
+      <h4>Sample Goals</h4>
+      <ul>
+        <li><strong>Intake:</strong> 5 game pieces &lt; 20s, no jams.</li>
+        <li><strong>Arm/Slide:</strong> pickup → score &lt; 2s, &lt; 5° overshoot.</li>
+        <li><strong>Drive:</strong> 3m straight &lt; 5cm drift; 90° turn within ±3°.</li>
+      </ul>
+    </section>
+
+    <!-- =================== COMPETITION DAY =================== -->
+    <section id="competition" class="card section">
+      <h3>8. Competition Day Playbook</h3>
+      <h4>Pre‑Event Packing</h4>
+      <ul class="checklist">
+        <li>Robot + spare battery + charger.</li>
+        <li>Driver Hub/phones, gamepads, cables, power strip.</li>
+        <li>Toolkit + spares: wheels/hubs/shafts/belts/chains/links/fuses/servos/motor/cables.</li>
+        <li>Docs: portfolio, outreach log, port map, inspection checklist.</li>
+        <li>Pit: poster/tri‑fold, tape, markers, sanitizer, snacks, water.</li>
+      </ul>
+      <h4>Inspections</h4>
+      <ul>
+        <li><strong>Hardware:</strong> size/weight, secure wiring, no sharp edges.</li>
+        <li><strong>Field:</strong> connect to control, basic comms/drive test.</li>
+        <li><strong>Software:</strong> team # correct, OpModes clear, no unsafe behaviors.</li>
+      </ul>
+      <h4>Drive Team Flow</h4>
+      <ul>
+        <li><strong>Roles:</strong> Driver, Operator, Coach.</li>
+        <li><strong>Pre‑match:</strong> alliance plan, battery check, reset encoders, set start config.</li>
+        <li><strong>During:</strong> drive clean, avoid fouls; consistency over risk.</li>
+        <li><strong>Post:</strong> power down, damage check, battery swap, log issues.</li>
+      </ul>
+      <h4>Judging</h4>
+      <ul>
+        <li>Arrive early; everyone speaks to their contributions.</li>
+        <li>Show data: charts, failures, design changes from feedback.</li>
+        <li>Gracious Professionalism: help, share, respect.</li>
+      </ul>
+    </section>
+
+    <!-- =================== APPENDICES =================== -->
+    <section id="appendices" class="section">
+      <article id="templates" class="card">
+        <h3>9. Appendices & Templates</h3>
+
+        <details open>
+          <summary>Meeting Agenda/Minutes</summary>
+          <pre class="template">
+Meeting Date: __________  Location: __________  Session #: ____
+Goals for Today: _______________________________________________
+Attendees: _____________________________________________________
+
+Tasks & Owners:
+1) Task – Owner – Due Date
+2) Task – Owner – Due Date
+3) Task – Owner – Due Date
+
+Outcomes & Notes:
+_______________________________________________________________
+_______________________________________________________________
+
+Next Steps:
+_______________________________________________________________
+          </pre>
+        </details>
+
+        <details>
+          <summary>Engineering Portfolio Outline</summary>
+          <ol>
+            <li>Team Overview: mission, members, roles, values.</li>
+            <li>Game Strategy: priorities, trade‑offs, rationale.</li>
+            <li>Robot Design: drivetrain, mechanisms, CAD/sketches, iterations, testing data.</li>
+            <li>Programming: control schemes, algorithms (encoders/IMU), autonomous strategy, reliability.</li>
+            <li>Outreach & Impact: events, partnerships, metrics, reflections.</li>
+            <li>Project Mgmt: schedule, risks, mitigations, lessons learned.</li>
+            <li>Appendices/Links: videos, repos, supporting materials (if allowed).</li>
+          </ol>
+        </details>
+
+        <details>
+          <summary>Outreach Log</summary>
+          <pre class="template">
+Date | Event | Audience | Activities | People Reached | Partners | Photos/Links | Reflections
+____ | _____ | ________ | __________ | ______________ | ________ | ___________  | ___________
+____ | _____ | ________ | __________ | ______________ | ________ | ___________  | ___________
+____ | _____ | ________ | __________ | ______________ | ________ | ___________  | ___________
+          </pre>
+        </details>
+
+        <details>
+          <summary>Risk & Readiness Checklist</summary>
+          <ul class="checklist">
+            <li>Safety: PPE, tool training, battery handling.</li>
+            <li>Robot: size/weight, sharp edges covered, strain‑relieved wiring, spares packed.</li>
+            <li>Software: TeleOp reliable; autonomous tested; configs backed up.</li>
+            <li>Docs: portfolio ready; judging script practiced; outreach log current.</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Pre‑Flight (Before Every Match)</summary>
+          <ol>
+            <li>Battery ≥ 12.5V and strapped in.</li>
+            <li>All connectors seated; radio link OK.</li>
+            <li>Fasteners tight; wheels/chains secure; mechanism homed.</li>
+            <li>Correct OpMode; start config set; alliance plan confirmed.</li>
+          </ol>
+        </details>
+
+        <details>
+          <summary>Port Map Worksheet</summary>
+          <pre class="template">
+Hub: _____________   Robot Config: ______________   Date: __________
+Motors: M0=______ M1=______ M2=______ M3=______ M4=______ M5=______
+Servos: S0=______ S1=______ S2=______ S3=______ S4=______ S5=______
+Sensors: I2C=______  Analog=______  Digital=______
+          </pre>
+        </details>
+
+        <details>
+          <summary>Judge Presentation (≈5 min) Outline</summary>
+          <ol>
+            <li>Intro (30s): Team, roles, mission.</li>
+            <li>Strategy (45s): Priorities + why.</li>
+            <li>Robot (90s): Key choices, iterations, test data.</li>
+            <li>Programming (60s): Control, autonomous approach, reliability.</li>
+            <li>Outreach (45s): Events, metrics, partnerships.</li>
+            <li>Lessons & Future (30s): Insights + next steps.</li>
+            <li>Q&A (time left): Invite questions; everyone ready with one story.</li>
+          </ol>
+        </details>
+
+        <details>
+          <summary>Sponsor Thank‑You Letter</summary>
+          <pre class="template">
+Dear [Sponsor Name],
+
+Thank you for supporting our FIRST Tech Challenge team. Your contribution helped us [equipment purchased/impact].
+This season we [brief accomplishment]. We appreciate your partnership and look forward to sharing our results
+at the next event.
+
+Sincerely,
+[Team Name]
+          </pre>
+        </details>
+      </article>
+    </section>
+
+    <!-- =================== SCHEDULES =================== -->
+    <section id="schedule" class="section">
+      <!-- 5A -->
+      <article id="schedule-8w" class="card">
+        <h3>5A. 8‑Week Detailed Schedule by Role</h3>
+        <p>Use these weekly checklists and hand‑offs to coordinate Builders, Programmers, and Outreach.</p>
+
+        <!-- Week blocks -->
+        <div class="weeks">
+          <!-- Repeat pattern for Weeks 1–8 -->
+          <details open>
+            <summary>Week 1</summary>
+            <div class="week-grid">
+              <div>
+                <h4>Builder</h4>
+                <ul>
+                  <li>Inventory kit; set labeled bins.</li>
+                  <li>Safety training; workspace rules.</li>
+                  <li>Assemble square chassis & 4‑wheel drive.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Programmer</h4>
+                <ul>
+                  <li>Install SDK/tools; update hub firmware.</li>
+                  <li>Create Robot Config; map motors.</li>
+                  <li>Minimal TeleOp + basic telemetry.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Outreach</h4>
+                <ul>
+                  <li>Branding (name/logo/colors), photo folder.</li>
+                  <li>Notebook: bios, goals, safety policy.</li>
+                  <li>Document unboxing + chassis build.</li>
+                </ul>
+              </div>
+            </div>
+            <h5>Dependencies</h5>
+            <ul class="deps">
+              <li>Programmer needs mounted hub + known ports from Builder.</li>
+              <li>Outreach needs photos/screenshots from both subteams.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Week 2</summary>
+            <div class="week-grid">
+              <div>
+                <h4>Builder</h4>
+                <ul>
+                  <li>Secure battery/hubs; plan strain‑relief.</li>
+                  <li>Drivetrain test (straight & turns); align.</li>
+                  <li>Prototype scoring mechanism.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Programmer</h4>
+                <ul>
+                  <li>Refine TeleOp mapping (driver/operator).</li>
+                  <li>Encoder helpers (drive straight/turn angle).</li>
+                  <li>Autonomous framework skeleton.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Outreach</h4>
+                <ul>
+                  <li>Meeting logs + first social update.</li>
+                  <li>Collect portfolio references.</li>
+                </ul>
+              </div>
+            </div>
+            <h5>Dependencies</h5>
+            <ul class="deps">
+              <li>TeleOp refinement depends on stable drivetrain tests.</li>
+              <li>Mechanism timing informs programming integration.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Week 3</summary>
+            <div class="week-grid">
+              <div>
+                <h4>Builder</h4>
+                <ul>
+                  <li>Mount mechanism with hard stops & guards.</li>
+                  <li>Check full motion; verify CG.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Programmer</h4>
+                <ul>
+                  <li>Integrate mechanism control + safety limits.</li>
+                  <li>Validate encoder distance/angle on tiles.</li>
+                  <li>Record baseline scoring cycle time.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Outreach</h4>
+                <ul>
+                  <li>Document choices/trade‑offs + test data.</li>
+                  <li>Plan first outreach demo.</li>
+                  <li>Draft portfolio structure.</li>
+                </ul>
+              </div>
+            </div>
+            <h5>Dependencies</h5>
+            <ul class="deps">
+              <li>Mechanism mounting complete before code integration.</li>
+              <li>Outreach needs test data for portfolio.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Week 4</summary>
+            <div class="week-grid">
+              <div>
+                <h4>Builder</h4>
+                <ul>
+                  <li>Mechanism V2 for repeatability.</li>
+                  <li>10 repeated scoring cycles; label wires.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Programmer</h4>
+                <ul>
+                  <li>IMU heading hold + precise turns.</li>
+                  <li>Autonomous V1 (park/score) with timeouts.</li>
+                  <li>Full match simulation.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Outreach</h4>
+                <ul>
+                  <li>Run outreach demo; collect metrics.</li>
+                  <li>Portfolio updates + charts.</li>
+                  <li>Start sponsor outreach.</li>
+                </ul>
+              </div>
+            </div>
+            <h5>Dependencies</h5>
+            <ul class="deps">
+              <li>Auto accuracy depends on alignment & consistency.</li>
+              <li>Outreach content uses charts & sim video.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Week 5</summary>
+            <div class="week-grid">
+              <div>
+                <h4>Builder</h4>
+                <ul>
+                  <li>Stress tests; reinforce weak points.</li>
+                  <li>Spare parts checklist.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Programmer</h4>
+                <ul>
+                  <li>Error handling & interlocks.</li>
+                  <li>Auto tuning (speed vs reliability).</li>
+                  <li>Tag known‑good backup.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Outreach</h4>
+                <ul>
+                  <li>Portfolio Draft V1.</li>
+                  <li>Judge deck (5‑min) build.</li>
+                  <li>Share stress‑test results.</li>
+                </ul>
+              </div>
+            </div>
+            <h5>Dependencies</h5>
+            <ul class="deps">
+              <li>Programmer tuning follows reliability fixes.</li>
+              <li>Judge deck pulls finalized photos/data.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Week 6</summary>
+            <div class="week-grid">
+              <div>
+                <h4>Builder</h4>
+                <ul>
+                  <li>Quick repair practice.</li>
+                  <li>Inspection checklist dry‑run.</li>
+                  <li>Pit tools finalized.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Programmer</h4>
+                <ul>
+                  <li>Scrimmages with metrics.</li>
+                  <li>Telemetry dashboards.</li>
+                  <li>Judging tech notes.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Outreach</h4>
+                <ul>
+                  <li>Portfolio V2 polish.</li>
+                  <li>Judge presentation practice.</li>
+                  <li>Sponsor updates sent.</li>
+                </ul>
+              </div>
+            </div>
+            <h5>Dependencies</h5>
+            <ul class="deps">
+              <li>Drive practice requires stable hardware/code.</li>
+              <li>Outreach rehearsals need consistent metrics.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Week 7</summary>
+            <div class="week-grid">
+              <div>
+                <h4>Builder</h4>
+                <ul>
+                  <li>Pack competition kit; label/charge batteries.</li>
+                  <li>Final calibration; pit repair checklist.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Programmer</h4>
+                <ul>
+                  <li>Code freeze; USB/cloud backups.</li>
+                  <li>Verify firmware/configs; print port map.</li>
+                  <li>Assist pit materials.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Outreach</h4>
+                <ul>
+                  <li>Print portfolio/notebook.</li>
+                  <li>Finalize logistics.</li>
+                  <li>Pre‑write event posts.</li>
+                </ul>
+              </div>
+            </div>
+            <h5>Dependencies</h5>
+            <ul class="deps">
+              <li>Accurate printed docs (port map, checklists, portfolio) for all.</li>
+              <li>Code freeze means no mapping changes in hardware.</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary>Week 8 (Competition Week)</summary>
+            <div class="week-grid">
+              <div>
+                <h4>Builder</h4>
+                <ul>
+                  <li>Pass inspections; fast between‑match repairs.</li>
+                  <li>Monitor wear; swap as needed.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Programmer</h4>
+                <ul>
+                  <li>Field‑tune auto starts; safe timeouts.</li>
+                  <li>Monitor telemetry; small reliability fixes only.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Outreach</h4>
+                <ul>
+                  <li>Present portfolio; everyone speaks.</li>
+                  <li>Capture media; thank sponsors.</li>
+                  <li>Collect lessons for debrief.</li>
+                </ul>
+              </div>
+            </div>
+            <h5>Dependencies</h5>
+            <ul class="deps">
+              <li>Clean hand‑offs: battery swaps, resets, OpMode selection.</li>
+              <li>Judging narrative needs consistent data & clear roles.</li>
+            </ul>
+          </details>
+        </div>
+      </article>
+
+      <!-- 5B -->
+      <article id="calendar" class="card">
+        <h3>5B. Date‑Aligned 8‑Week Calendar</h3>
+        <p>Week 8 includes your competition date. Weeks start on Monday. Set the date and generate:</p>
+
+        <form id="date-form" class="date-form" onsubmit="return false;">
+          <label for="compDate">Competition Date</label>
+          <input id="compDate" type="date" value="2025-11-06" />
+          <button class="btn primary" id="genBtn">Generate Calendar</button>
+        </form>
+
+        <div id="weekRanges" class="week-ranges" aria-live="polite"></div>
+
+        <h4>Visual Gantt (by Role)</h4>
+        <div id="gantt" class="gantt">
+          <!-- JS draws bars here -->
+        </div>
+        <p class="hint">Dashed line marks competition day. Drag to scroll horizontally (on trackpads) if needed.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- =================== BACK TO TOP =================== -->
+  <button class="to-top" aria-label="Back to top">↑</button>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> FTC Team Handbook — Funky Edition. Built for beginners using the Studica FTC Starter Kit.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
